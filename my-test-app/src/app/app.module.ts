@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ProductStarComponent } from './product-star/product-star.component';
@@ -12,7 +13,9 @@ import { TodoListComponent } from './todo-list/todo-list.component';
     TodoListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
+    //remember to add imported module to imports
   ],
   providers: [],
   bootstrap: [AppComponent]

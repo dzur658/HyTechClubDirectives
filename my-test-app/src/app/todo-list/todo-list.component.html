@@ -1,2 +1,22 @@
 <label>TO DO LIST:</label>
+<!--ngFor:
+-----------------------------
+  for x in myList:
+    print(x)
+-----------------------------
+  todoItem is like "x"
+  let is like "for"
+  of is like "in"
+-->
+<div *ngFor="let todoItem of allTodos">
+  <div *ngIf="!todoItem.complete">
+  <input type="checkbox" [(ngModel)]="todoItem.complete">
+  {{ todoItem.description }}
+  </div>
+</div>
+
+<input type="text" placeholder="Enter task description" [(ngModel)]="newTask"/>
+<button (click)="clickAddTask()">
+Add Task
+</button>
 
